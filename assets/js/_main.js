@@ -6,7 +6,7 @@
  * replace the dash with an underscore when adding it to the object below.
  *
  * .noConflict()
- * The routing is enclosed within an anonymous function so that you can 
+ * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  *
  * Google CDN, Latest jQuery
@@ -16,13 +16,75 @@
 
 (function($) {
 
-// Use this variable to set up the common and page specific functions. If you 
+// Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
   // All pages
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      /*
+      var options = {
+        autoPlay: true,
+        cycle: true,
+        animateStartingFrameIn: false,
+        autoPlayDelay: 4000
+      };
+      var sequence = $("#sequence").sequence(options).data("sequence");
+      */
+
+      $.stellar({
+        horizontalOffset: 0,
+        verticalOffset: 0,
+        responsive: true,
+        scrollProperty: 'scroll',
+        positionProperty: 'position'
+      });
+
+      // Bootstrap Affix
+      $('.navbar-custom').affix({
+        offset: {
+          top: 150
+        }
+      });
+
+      $('.carousel').carousel({
+        interval: 4000,
+        wrap: true,
+        pause: false
+      });
+
+      /* Taken out because of effect it has on bootstrap carousel
+      // Smooth Scroll
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
+
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                 if (target.length) {
+                   $('html,body').animate({
+                       scrollTop: target.offset().top
+                  }, 1000);
+                  return false;
+              }
+          }
+      });
+      */
+
+      $(function () {
+        if ($(window).width() > 767) {
+          skrollr.init();
+        }
+
+        $(window).on('resize', function () {
+          if ($(window).width() <= 767) {
+            skrollr.init().destroy();
+          } else {
+              skrollr.init();
+          }
+        });
+      });
+
     }
   },
   // Home page

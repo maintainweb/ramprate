@@ -9,6 +9,7 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 //add_theme_support('sequence');              // Enable Sequence.js
 add_theme_support('stellar');               // Enable Stellar.js
+add_theme_support('skrollr');               // Enable skrollr.js
 
 
 /**
@@ -64,7 +65,9 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php'
+      'template-custom.php',
+      'template-fullwidth.php',
+      'template-singlepagelayout.php'
     )
   );
 

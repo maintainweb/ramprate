@@ -1,0 +1,223 @@
+.carousel.fade
+{
+  .carousel-inner {
+    overflow: visible;
+  }
+    opacity: 1;
+    .item
+    {
+        -moz-transition: opacity ease-in-out 1.0s;
+        -o-transition: opacity ease-in-out 1.0s;
+        -webkit-transition: opacity ease-in-out 1.0s;
+        transition: opacity ease-in-out 1.0s;
+        left: 0 !important;
+        opacity: 0;
+        top:0;
+        bottom: 0;
+        position:absolute;
+        width: 100%;
+        display:block !important;
+        z-index:1;
+        overflow: visible;
+        &:first-child {
+            top:auto;
+            position:relative;
+        }
+
+        &.active {
+          opacity: 1;
+          -moz-transition: opacity ease-in-out 1.0s;
+          -o-transition: opacity ease-in-out 1.0s;
+          -webkit-transition: opacity ease-in-out 1.0s;
+          transition: opacity ease-in-out 1.0s;
+          z-index:2;
+        }
+      img {
+        margin-top: -40px;
+        position: relative;
+        z-index: 1090;
+        left: 85px;
+      }
+      .carousel-caption {
+        left: 55%;
+        right: 10%;
+        top: 10px;
+      }
+    }
+  .carousel-control {
+    top: 50%;
+    width: 0;
+    background-image: none!important;
+    background-repeat: no-repeat;
+    z-index: 1091;
+    &.left {
+      background-image: none!important;
+    }
+    &.right {
+      background-image: none!important;
+    }
+  }
+}
+
+#laptop-skrollr {
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+
+
+body {
+  .content-inner {
+    max-width: 100%;
+    padding: 100px 0;
+    .sqs-block.html-block,
+    .sqs-block.image-block,
+    .sqs-block.horizontalrule-block {
+      max-width: 960px;
+      padding-left: 8%;
+      padding-right: 8%;
+      margin: 0 auto;
+    }
+  }
+  .title-desc-wrapper {
+    height: 450px;
+  }
+}
+
+.laptop-outer-wrap {
+  height: 860px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  .partner-logos-container {
+    height: 860px;
+    width: 100%;
+    position: absolute;
+    .partner-logo {
+      position: absolute;
+      max-width: 160px;
+      z-index: 0;
+    }
+  }
+  .laptop {
+    margin: 0 auto;
+    img {
+      margin: 0 auto;
+      padding-top: 150px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: -120px;
+  }
+  .etas {
+    text-align: center;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+      h3 {
+        margin: 0;
+      }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .laptop-outer-wrap {
+    height: 700px;
+    .partner-logos-container {
+      height: 700px;
+      .partner-logo {
+        max-width: 80px;
+      }
+    }
+    .laptop {
+      width: 85%;
+      margin: 100px auto 0 auto;
+      img {
+        margin: 0 auto;
+        padding-top: 300px;
+        padding-bottom: 20px;
+      }
+    }
+    h2 {
+      margin-bottom: -370px;
+    }
+    .etas {
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#akamai {
+
+}
+
+#att {
+
+}
+
+#aws {
+
+}
+
+#broadcom {
+
+}
+
+#centurylink {
+
+}
+
+#digitalreality {
+
+}
+
+#edge {
+
+}
+
+#equinix {
+
+}
+
+#hcl {
+
+}
+
+#ipsoft {
+
+}
+
+#l3 {
+
+}
+
+#microsoft {
+
+}
+
+#rackspace {
+
+}
+
+#softlayer {
+
+}
+
+#servicemesh {
+
+}
+
+#verizon {
+
+}

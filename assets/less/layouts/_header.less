@@ -5,12 +5,36 @@
 
 
 .banner {
+  text-transform: uppercase;
    &.navbar-custom {
-      background-color: fade(@navbar-custom-bg, 100%);
+      border: 0;
+      font-weight: 700;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      background-color: rgba(255,255,255,0.0)!important;
       .transition(0.5s 0 all ease);
+      &.affix-top {
+        background-color: rgba(255,255,255,0.0)!important;
+        .transition(0.5s 0 all ease);
+        .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+          color: #fff;
+          background-color: transparent;
+          .transition(0.5s 0 all ease);
+        }
+        .navbar-nav > li > a {
+          color: #fff;
+          background-color: transparent;
+          .transition(0.5s 0 all ease);
+        }
+      }
       &.affix {
-         background-color: fade(@navbar-custom-bg, 100%);
-         .transition(0.5s 0 all ease);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+        background-color: rgba(255,255,255,0.90)!important;
+        .transition(0.5s 0 all ease);
       }
    }
    .navbar-brand{
@@ -40,8 +64,34 @@
    }
 }
 
+/*
 body.logged-in.admin-bar {
   .banner {
     margin-top: 32px!important;
+  }
+}
+*/
+
+.wrap.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: -(@navbar-height * 2);
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#jumbo-image {
+  height: 700px;
+  .call-to {
+    margin-top: 230px;
+    position: relative;
+    h1 {
+      color: #fff;
+    }
+    .lead {
+      color: #fff;
+    }
   }
 }
