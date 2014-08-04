@@ -22,6 +22,9 @@ $roots_includes = array(
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
+  'lib/acf.php',              // ACF Custom functions
+  'lib/color.php',            // Color Custom functions
+  'lib/post-types.php',       // Post Type Custom functions
 );
 
 foreach ($roots_includes as $file) {
