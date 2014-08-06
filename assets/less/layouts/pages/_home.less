@@ -1,3 +1,17 @@
+#jumbo-image {
+  height: 700px;
+  .call-to {
+    margin-top: 230px;
+    position: relative;
+    h1 {
+      color: #fff;
+    }
+    .lead {
+      color: #fff;
+    }
+  }
+}
+
 .carousel.fade
 {
   .carousel-inner {
@@ -62,6 +76,55 @@
 #laptop-skrollr {
   padding-top: 300px;
   padding-bottom: 150px;
+}
+
+#columns {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  h2 {
+    .text-center;
+    padding-bottom: 60px;
+  }
+  .col-sm-3 {
+    overflow: hidden!important;
+    .block {
+      .square(234px);
+      background-color: #423194;
+      color: #fff;
+      .text-center;
+      overflow: hidden!important;
+      display: block;
+      h3 {
+        text-transform: uppercase;
+      }
+      .top-content {
+        padding-top: 25%;
+        .square(234px);
+        top: 0;
+        position: absolute;
+        .transition(0.5s 0 all ease);
+      }
+      .inner-content {
+        .square(234px);
+        top: 100%;
+        position: absolute;
+        background-color: #555555;
+        padding-left: 20px;
+        padding-right: 20px;
+        .transition(0.5s 0 all ease);
+      }
+      &:hover {
+        .top-content {
+          top: -100%;
+          .transition(0.5s 0 all ease);
+        }
+        .inner-content {
+          top: 0;
+          .transition(0.5s 0 all ease);
+        }
+      }
+    }
+  }
 }
 
 
