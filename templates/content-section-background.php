@@ -45,9 +45,9 @@ endif; ?>
     display: none!important;
   }
   <?php endif; ?>
-
+/*
   .single-page-section-<?php echo $r; ?>:before {
-    /*background-color: <?php echo $background_color;?>*/
+    background-color: <?php echo $background_color;?>
     background-image: -webkit-gradient(linear, left top, left bottom, from(<?php echo $rgba_full; ?>), to(<?php echo $rgba_clear; ?>));
     background-image: -webkit-linear-gradient(top, <?php echo $rgba_full; ?>, <?php echo $rgba_clear; ?>);
     background-image: -moz-linear-gradient(top, <?php echo $rgba_full; ?>, <?php echo $rgba_clear; ?>);
@@ -58,7 +58,7 @@ endif; ?>
   }
 
   .single-page-section-<?php echo $r; ?>:after {
-    /*background-color: <?php echo $background_color;?>;*/
+    background-color: <?php echo $background_color;?>;
     background-image: -webkit-gradient(linear, left top, left bottom, from(<?php echo $rgba_clear; ?>), to(<?php echo $rgba_full; ?>));
     background-image: -webkit-linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
     background-image: -moz-linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
@@ -67,5 +67,5 @@ endif; ?>
     background-image: linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='<?php echo $background_color;?>', EndColorStr='<?php echo $background_color;?>');
   }
-
+*/
 </style>

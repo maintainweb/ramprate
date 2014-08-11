@@ -10,6 +10,7 @@ add_theme_support('jquery-cdn');            // Enable to load jQuery from the Go
 //add_theme_support('sequence');              // Enable Sequence.js
 add_theme_support('stellar');               // Enable Stellar.js
 add_theme_support('skrollr');               // Enable skrollr.js
+add_theme_support('bigvideo');               // Enable bigvideo.js
 
 
 /**

@@ -10,6 +10,9 @@ if( have_rows('sections') ):
         if( get_row_layout() == 'html' ):
             get_template_part('templates/section', 'html');
         endif;
+        if( get_row_layout() == 'html_w_parallax_header' ):
+            get_template_part('templates/section', 'html-w-parallax-header');
+        endif;
         if( get_row_layout() == 'sequence' ):
         	get_template_part('templates/section', 'sequence');
         endif;

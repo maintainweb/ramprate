@@ -85,6 +85,22 @@ var Roots = {
         });
       });
 
+      $(function() {
+        var BV = new $.BigVideo({
+          useFlashForFirefox:false,
+          container: $('#big-video'),
+          doLoop:true,
+          controls:false,
+          shrinkable:true
+        });
+        BV.init();
+          BV.show([
+              //{ type: 'video/mp4',  src: '/wp-content/uploads/shutterstock_v3535412.mp4' },
+              //{ type: 'video/mkv',  src: '/wp-content/uploads/shutterstock_v3535412.mkv' },
+              { type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
+          ]);
+      });
+
     }
   },
   // Home page
