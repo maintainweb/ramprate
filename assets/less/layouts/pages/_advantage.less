@@ -62,8 +62,8 @@
         font-size: 21px;
         border-color: #fff;
         border-width: 10px;
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
         -webkit-transition: all 1000ms ease;
         -moz-transition: all 1000ms ease;
         -ms-transition: all 1000ms ease;
@@ -87,8 +87,8 @@
         position: relative;
         opacity: 1;
         font-size: 21px;
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
         border-color: #02012a;
         border-width: 1px;
         -webkit-transition: all 1000ms ease;
@@ -127,7 +127,7 @@
 
 .circle-item a span {
   position: relative;
-  top: 65px;
+  top: 40%;
 }
 
 h2.section-title {
@@ -143,18 +143,36 @@ h2.section-title {
   height: 750px;
   min-height: 750px;
 }
-.inform {
-  min-height: 1000px;
+
+.advantage-section {
+
 }
+
+.device-wrapper {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
 .skrollr-device {
   position: absolute;
+  display: block;
   &.ipad {
-
+    height: 250px;
+    width: 100%;
+    z-index: 11;
   }
   &.iphone {
-
+    height: 150px;
+    width: 100%;
+    margin-right: 100px;
+    z-index: 11;
   }
   &.desktop {
-
+    top: 25%;
+    left: 25%;
+    height: 240px;
+    width: 280px;
+    z-index: 10;
   }
 }
