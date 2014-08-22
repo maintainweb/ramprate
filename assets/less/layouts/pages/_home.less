@@ -1,5 +1,5 @@
 #jumbo-image {
-  height: 700px;
+  height: 500px;
   .call-to {
     margin-top: 230px;
     position: relative;
@@ -34,10 +34,24 @@
         z-index:1;
         overflow: visible;
         &:first-child {
-            top:auto;
-            position:relative;
+          top:auto;
+          position:relative;
+          img {
+            margin-top: -40px;
+          }
+          h3 {
+            margin-top: 40px;
+          }
         }
-
+        &:nth-child(2) {
+          img {
+            margin-top: 70px;
+          }
+          h3 {
+            margin-top: 70px;
+            padding-left: 40px;
+          }
+        }
         &.active {
           opacity: 1;
           -moz-transition: opacity ease-in-out 1.0s;
@@ -47,7 +61,7 @@
           z-index:2;
         }
       img {
-        margin-top: -40px;
+        //margin-top: -40px;
         position: relative;
         z-index: 1090;
         left: 85px;
@@ -56,6 +70,9 @@
         left: 55%;
         right: 10%;
         top: 10px;
+      }
+      &.item-measure {
+        height: 250px;
       }
     }
   .carousel-control {
@@ -74,8 +91,11 @@
 }
 
 #laptop-skrollr {
-  padding-top: 300px;
-  padding-bottom: 150px;
+  h3 {
+    margin-top: 40px;
+    text-align: center;
+  }
+
 }
 
 #columns {

@@ -68,6 +68,7 @@ function roots_display_sidebar() {
     array(
       'template-custom.php',
       'template-fullwidth.php',
+      'template-roles.php',
       'template-singlepagelayout.php'
     )
   );

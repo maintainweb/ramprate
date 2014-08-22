@@ -40,14 +40,10 @@ endif; ?>
       background-repeat: <?php echo $background_repeat; ?>;
   <?php endif; ?>
   }
-  <?php if( empty($background_image) ): ?>
-  .single-page-section-<?php echo $r; ?>:before, .single-page-section-<?php echo $r; ?>:after {
-    display: none!important;
-  }
-  <?php endif; ?>
-/*
+
+<?php if( get_sub_field('fade_background_top') ) { ?>
   .single-page-section-<?php echo $r; ?>:before {
-    background-color: <?php echo $background_color;?>
+    /*background-color: <?php echo $background_color;?>;*/
     background-image: -webkit-gradient(linear, left top, left bottom, from(<?php echo $rgba_full; ?>), to(<?php echo $rgba_clear; ?>));
     background-image: -webkit-linear-gradient(top, <?php echo $rgba_full; ?>, <?php echo $rgba_clear; ?>);
     background-image: -moz-linear-gradient(top, <?php echo $rgba_full; ?>, <?php echo $rgba_clear; ?>);
@@ -56,9 +52,14 @@ endif; ?>
     background-image: linear-gradient(top, <?php echo $rgba_full; ?>, <?php echo $rgba_clear; ?>);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='<?php echo $background_color;?>', EndColorStr='<?php echo $background_color;?>');
   }
-
+<?php } else { ?>
+  .single-page-section-<?php echo $r; ?>:before {
+    display: none!important;
+  }
+<?php } ?>
+<?php if( get_sub_field('fade_background_bottom') ) { ?>
   .single-page-section-<?php echo $r; ?>:after {
-    background-color: <?php echo $background_color;?>;
+    /*background-color: <?php echo $background_color;?>;*/
     background-image: -webkit-gradient(linear, left top, left bottom, from(<?php echo $rgba_clear; ?>), to(<?php echo $rgba_full; ?>));
     background-image: -webkit-linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
     background-image: -moz-linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
@@ -67,5 +68,9 @@ endif; ?>
     background-image: linear-gradient(top, <?php echo $rgba_clear; ?>, <?php echo $rgba_full; ?>);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='<?php echo $background_color;?>', EndColorStr='<?php echo $background_color;?>');
   }
-*/
+<?php } else { ?>
+  .single-page-section-<?php echo $r; ?>:after {
+    display: none!important;
+  }
+<?php } ?>
 </style>

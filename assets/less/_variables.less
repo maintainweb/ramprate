@@ -1,74 +1,10 @@
-// Brand colors
-// -------------------------
-
 @brand-primary:         #291684;
 
 @border-radius-base:        0;
 @border-radius-large:       0;
 @border-radius-small:       0;
 
-// Glyphicons path
-// -------------------------
+//@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600);
 
-@icon-font-path:        "../vendor/bootstrap/fonts/";
-
-
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
-
-@font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-/* Color Mixins */
-@complement1: spin(@base, 180);
-@complement2: darken(spin(@base, 180), 5%);
-@lighten1: lighten(@base, 15%);
-@lighten2: lighten(@base, 30%);
-@lighter1: lighten(spin(@base, 5), 10%);
-@lighter2: lighten(spin(@base, 10), 20%);
-@darker1: darken(spin(@base, -5), 10%);
-@darker2: darken(spin(@base, -10), 20%);
-
-/* Primary Color Mixin */
-@base: #291684;
-@primary-color: @base;
-.primary-background-base   {background-color: @base;}
-.primary-background-complement1   {background-color: @complement1;}
-.primary-background-complement2 {background-color: @complement2;}
-.primary-background-lighten1  {background-color: @lighten1;}
-.primary-background-lighten2  {background-color: @lighten2;}
-.primary-background-lighter1   {background-color: @lighter1;}
-.primary-background-lighter2 {background-color: @lighter2;}
-.primary-background-darker1  {background-color: @darker1;}
-.primary-background-darker2  {background-color: @darker2;}
-.primary-color-base   {color: @base;}
-.primary-color-complement1   {color: @complement1;}
-.primary-color-complement2 {color: @complement2;}
-.primary-color-lighten1  {color: @lighten1;}
-.primary-color-lighten2  {color: @lighten2;}
-.primary-color-lighter1   {color: @lighter1;}
-.primary-color-lighter2 {color: @lighter2;}
-.primary-color-darker1  {color: @darker1;}
-.primary-color-darker2  {color: @darker2;}
-
-
-/* Secondary Color Mixin */
-@base: #D96020;
-@secondary-color: @base;
-.secondary-background-base   {background-color: @base;}
-.secondary-background-complement1   {background-color: @complement1;}
-.secondary-background-complement2 {background-color: @complement2;}
-.secondary-background-lighten1  {background-color: @lighten1;}
-.secondary-background-lighten2  {background-color: @lighten2;}
-.secondary-background-lighter1   {background-color: @lighter1;}
-.secondary-background-lighter2 {background-color: @lighter2;}
-.secondary-background-darker1  {background-color: @darker1;}
-.secondary-background-darker2  {background-color: @darker2;}
-.secondary-color-base   {color: @base;}
-.secondary-color-complement1   {color: @complement1;}
-.secondary-color-complement2 {color: @complement2;}
-.secondary-color-lighten1  {color: @lighten1;}
-.secondary-color-lighten2  {color: @lighten2;}
-.secondary-color-lighter1   {color: @lighter1;}
-.secondary-color-lighter2 {color: @lighter2;}
-.secondary-color-darker1  {color: @darker1;}
-.secondary-color-darker2  {color: @darker2;}
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

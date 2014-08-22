@@ -49,7 +49,7 @@ var Roots = {
       });
 
       $('.carousel').carousel({
-        interval: 4000,
+        interval: 7000,
         wrap: true,
         pause: false
       });
@@ -94,11 +94,16 @@ var Roots = {
           shrinkable:true
         });
         BV.init();
-          BV.show([
-              //{ type: 'video/mp4',  src: '/wp-content/uploads/shutterstock_v3535412.mp4' },
+        if (Modernizr.touch) {
+            BV.show('/wp-content/uploads/video-poster.jpg');
+        } else {
+            BV.show([
+              { type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.sd.mp4?s=721c1d204d35c2d31647207fa0c46ddf' }
+              //{ type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.hd.mp4?s=343b3258c44c10fcd5ffcd16d02fe01e' },
               //{ type: 'video/mkv',  src: '/wp-content/uploads/shutterstock_v3535412.mkv' },
-              { type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
+              //{ type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
           ]);
+        }
       });
 
     }
