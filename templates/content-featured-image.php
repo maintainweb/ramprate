@@ -1,6 +1,6 @@
 <?php
 $size = 'medium';
-$class = 'img-responsive';
+$class = 'img-responsive img-thumbnail';
 if ( has_post_thumbnail() ) {
   the_post_thumbnail($size, array('class' => $class));
 } else { ?>

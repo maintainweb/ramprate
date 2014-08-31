@@ -42,7 +42,19 @@ var Roots = {
       });
 
       // Bootstrap Affix
-      $('.navbar-custom').affix({
+      $('.navbar-custom.white').affix({
+        offset: {
+          top: 150
+        }
+      });
+
+      $('.navbar-custom.dark').affix({
+        offset: {
+          top: 150
+        }
+      });
+
+      $('.secondary-navbar').affix({
         offset: {
           top: 150
         }

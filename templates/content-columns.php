@@ -4,6 +4,7 @@ $row_count = count($post_objects);
 if ($row_count == 2) { $class = array('col-xs-12', 'col-sm-6', 'col-md-6', 'col-lg-6'); }
 if ($row_count == 3) { $class = array('col-xs-12', 'col-sm-4', 'col-md-4', 'col-lg-4'); }
 if ($row_count == 4) { $class = array('col-xs-12', 'col-sm-3', 'col-md-3', 'col-lg-3'); }
+if ($row_count == 5) { $class = array('col-xs-12', 'col-sm-3', 'col-md-3', 'col-lg-3'); }
 if ($row_count == 6) { $class = array('col-xs-12', 'col-sm-2', 'col-md-2', 'col-lg-2'); }
 $classes = implode(" ",$class);
 

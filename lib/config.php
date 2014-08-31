@@ -7,11 +7,19 @@ add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
 add_theme_support('soil-nice-search');      // Enable /?s= to /search/ redirect from Soil
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
-//add_theme_support('sequence');              // Enable Sequence.js
-add_theme_support('stellar');               // Enable Stellar.js
-add_theme_support('skrollr');               // Enable skrollr.js
-add_theme_support('bigvideo');               // Enable bigvideo.js
 
+if( get_field('enable_sequence', 'options') ) {
+  add_theme_support('sequence');              // Enable Sequence.js
+}
+if( get_field('enable_stellar', 'options') ) {
+  add_theme_support('stellar');               // Enable Stellar.js
+}
+if( get_field('enable_skrollr', 'options') ) {
+  add_theme_support('skrollr');               // Enable skrollr.js
+}
+if( get_field('enable_bigvideo', 'options') ) {
+  add_theme_support('bigvideo');         // Enable bigvideo.js
+}
 
 /**
  * Configuration values
@@ -59,7 +67,10 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_home',
+      'is_front_page',
+      'is_archive',
+      'is_singular'
     ),
     /**
      * Page template checks (via is_page_template())
@@ -69,6 +80,7 @@ function roots_display_sidebar() {
       'template-custom.php',
       'template-fullwidth.php',
       'template-roles.php',
+      'template-feed.php',
       'template-singlepagelayout.php'
     )
   );

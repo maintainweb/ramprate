@@ -9,8 +9,8 @@ section.single-page-section {
    top: 0;
    left: 0;
    display: block;
-   margin-left: -(@grid-gutter-width * 0.5);
-   margin-right: -(@grid-gutter-width * 0.5);
+   //margin-left: -(@grid-gutter-width * 0.5);
+   //margin-right: -(@grid-gutter-width * 0.5);
    &:first-of-type {
       //margin-top: -(@content-spacing-top * 1.0);
       //padding-top: (@content-spacing-top * 1.0);
@@ -18,7 +18,6 @@ section.single-page-section {
    &:before {
     content: " ";
     display: block;
-    height: 200px;
     width: 100%;
     display: block;
     position: absolute;
@@ -30,7 +29,6 @@ section.single-page-section {
    &:after {
     content: " ";
     display: block;
-    height: 200px;
     width: 100%;
     display: block;
     position: absolute;
@@ -43,8 +41,6 @@ section.single-page-section {
     .container {
       position: relative;
       z-index: 1;
-      padding-top: (@padding-large-vertical * 4);
-      padding-bottom: (@padding-large-vertical * 4);
       .text-center;
       h2 {
         padding-bottom: 40px;
@@ -64,6 +60,10 @@ section.single-page-section {
       z-index: 1;
     }
   }
+}
+
+#together {
+  overflow: hidden;
 }
 
 body.page-id-207 {

@@ -17,8 +17,14 @@ if( have_rows('sections') ):
             get_template_part('templates/section', 'html-w-parallax-header');
         endif;
         if( get_row_layout() == 'columns' ):
-        	get_template_part('templates/section', 'columns');
- 		endif;
+            get_template_part('templates/section', 'columns');
+        endif;
+        if( get_row_layout() == 'feed' ):
+            get_template_part('templates/section', 'feed');
+        endif;
+        if( get_row_layout() == 'call_to_action' ):
+            get_template_part('templates/section', 'call-to-action');
+        endif;
  	$r++;
     endwhile;
 

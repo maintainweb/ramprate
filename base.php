@@ -11,8 +11,9 @@
     do_action('get_header');
     get_template_part('templates/header');
   ?>
+  <?php get_template_part('templates/page', 'background'); ?>
 
-  <div class="wrap container<?php if ( is_page_template('template-singlepagelayout.php') ||  is_page_template('template-roles.php')) { ?>-fluid<?php } ?>" role="document">
+  <div class="wrap container<?php if ( is_page_template('template-singlepagelayout.php') ||  is_page_template('template-roles.php') ||  is_page_template('template-feed.php') ||  is_page_template('template-logos.php') ||  is_page_template('template-custom.php') ||  is_page_template('template-fullwidth.php')) { ?>-fluid<?php } ?>" role="document">
     <div class="content row">
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>

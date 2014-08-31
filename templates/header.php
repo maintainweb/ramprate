@@ -1,4 +1,7 @@
-<header class="banner navbar navbar-default navbar-custom navbar-fixed-top" role="banner">
+<?php
+  if( get_field('navbar_style') ) { $navclass = get_field('navbar_style'); } else { $navclass = get_field('navbar_style', 'options'); };
+?>
+<header class="banner navbar navbar-default navbar-custom navbar-fixed-top <?php echo $navclass ?>" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

@@ -36,10 +36,20 @@
 ?>
 
   <style>
-    .banner.affix-top .navbar-brand {
+    .banner.affix-top .navbar-brand,
+    .banner.white.transparent-background .navbar-brand,
+    .banner.white.gray-background .navbar-brand,
+    .banner.white .navbar-brand {
       background-image: url(<?php echo $urlwhite; ?>);
     }
-    .banner.affix .navbar-brand {
+    .banner.affix .navbar-brand,
+    .banner.dark.transparent-background .navbar-brand,
+    .banner.dark-gray-background .navbar-brand,
+    .banner.dark .navbar-brand,
+    .banner.affix.white .navbar-brand,
+    .banner.affix-top.dark .navbar-brand,
+    .banner.affix-top.dark.transparent-background .navbar-brand,
+    .banner.affix-top.dark.gray-background .navbar-brand {
       background-image: url(<?php echo $url; ?>);
     }
   </style>

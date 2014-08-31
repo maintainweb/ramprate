@@ -4,7 +4,52 @@
 @border-radius-large:       0;
 @border-radius-small:       0;
 
-//@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
 
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300!important;
+}
+
+p, ul, ol, li,
+.dropdown-menu > li > a {
+  font-family: @font-family-sans-serif;
+  font-weight: 300!important;
+}
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+@navbar-custom-color:             #777;
+@navbar-custom-bg:                #FFF;
+@navbar-custom-border:            darken(@navbar-custom-bg, 6.5%);
+@navbar-height:                   90px;
+
+@navbar-dark-color:               @navbar-custom-color;
+@navbar-light-color:              rgba(255,255,255,0.9);
+@navbar-gray-bg:                  rgba(200,200,200,0.9);
+
+// Navbar links
+@navbar-default-link-color:                #777;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         darken(@navbar-default-link-hover-color, 6.5%);
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
