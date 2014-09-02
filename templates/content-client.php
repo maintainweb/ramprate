@@ -66,7 +66,12 @@ endif; ?>
   $logosizing = 'extra-short';
 } ?>
 
-<?php $classes = 'col-xs-6 col-sm-4 col-md-3 col-lg-3 ' . $logosizing; ?>
+<?php
+if ( is_page_template('template-logos.php')) {
+  $classes = 'col-xs-6 col-sm-4 col-md-3 col-lg-3 ' . $logosizing;
+} else {
+  $classes = 'col-xs-6 col-sm-3 col-md-2 col-lg-2 ' . $logosizing;
+} ?>
 
 <style>
   #logo-link-<?php echo the_ID(); ?>.logo-link article .img-client {

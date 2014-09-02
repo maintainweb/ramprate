@@ -56,7 +56,7 @@ endif; ?>
   <?php if( !empty($background_repeat) ): ?>
       background-repeat: <?php echo $background_repeat; ?>;
   <?php endif; ?>
-  <?php if( !empty($background_position) && get_sub_field('section_background_position') == "percentage") : ?>
+  <?php if( !empty($background_position) && get_sub_field('section_background_position') != "percentage") : ?>
       background-position: <?php echo $background_position; ?>;
   <?php endif; ?>
   <?php if(get_sub_field('section_background_position') == "percentage") : ?>

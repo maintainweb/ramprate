@@ -17,7 +17,7 @@ endif;
 if (is_singular('resource')) {
   $class = 'btn-lg btn-primary';
 } else {
-  $class = 'btn-xs btn-default';
+  $class = 'btn-sm btn-default';
 }
 
 if( get_field('resource_download') ):
