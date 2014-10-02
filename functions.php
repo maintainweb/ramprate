@@ -25,6 +25,7 @@ $roots_includes = array(
   'lib/acf.php',              // ACF Custom functions
   'lib/color.php',            // Color Custom functions
   'lib/post-types.php',       // Post Type Custom functions
+  'lib/editor-styles.php',       // Editor Styles functions
 );
 
 foreach ($roots_includes as $file) {

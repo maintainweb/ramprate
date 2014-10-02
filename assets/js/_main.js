@@ -85,14 +85,14 @@ var Roots = {
 
       $(function () {
         if ($(window).width() > 767) {
-          skrollr.init();
+          skrollr.init({forceHeight: false});
         }
 
         $(window).on('resize', function () {
           if ($(window).width() <= 767) {
             skrollr.init().destroy();
           } else {
-              skrollr.init();
+              skrollr.init({forceHeight: false});
           }
         });
       });
@@ -107,16 +107,20 @@ var Roots = {
         });
         BV.init();
         if (Modernizr.touch) {
-            BV.show('/wp-content/uploads/video-poster.jpg');
+            BV.show('/wp-content/uploads/advantage-page-background.jpg');
         } else {
             BV.show([
-              { type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.sd.mp4?s=721c1d204d35c2d31647207fa0c46ddf' }
-              //{ type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.hd.mp4?s=343b3258c44c10fcd5ffcd16d02fe01e' },
+              //{ type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.sd.mp4?s=721c1d204d35c2d31647207fa0c46ddf' }
+              { type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.hd.mp4?s=343b3258c44c10fcd5ffcd16d02fe01e' }
               //{ type: 'video/mkv',  src: '/wp-content/uploads/shutterstock_v3535412.mkv' },
               //{ type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
           ]);
+            BV.getPlayer().on('durationchange',function(){
+                $('#big-video-wrap').fadeIn();
+            });
         }
       });
+
 
     }
   },
@@ -127,9 +131,9 @@ var Roots = {
     }
   },
   // About us page, note the change from about-us to about_us.
-  about_us: {
+  advantage: {
     init: function() {
-      // JavaScript to be fired on the about us page
+
     }
   }
 };

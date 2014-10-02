@@ -11,6 +11,8 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus(array(
     'primary_navigation' => __('Primary Navigation', 'roots'),
+    'resource_navigation' => __('Resources Navigation', 'roots'),
+    'client_navigation' => __('Client Navigation', 'roots'),
     'footer_navigation' => __('Footer Navigation', 'roots'),
   ));
 
@@ -19,6 +21,20 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size( 'large-banner', 620, 300, array( 'center', 'center' ) );
+
+
+function modify_contact_methods($profile_fields) {
+
+  // Add new fields
+  $profile_fields['title'] = 'Title';
+  $profile_fields['twitter'] = 'Twitter Username';
+  $profile_fields['facebook'] = 'Facebook URL';
+  $profile_fields['gplus'] = 'Google+ URL';
+
+  return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

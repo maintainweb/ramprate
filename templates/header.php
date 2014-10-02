@@ -20,6 +20,7 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-left'));
         endif;
       ?>
+      <?php /*
       <div class="hidden-xs nav navbar-nav navbar-right">
         <?php if ( is_user_logged_in() ) { ?>
           <div><a class="btn btn-primary" href="#">Admin</a></div>
@@ -27,6 +28,7 @@
           <div><a class="btn btn-primary" href="#">Login</a></div>
         <?php } ?>
       </div>
+      */ ?>
     </nav>
   </div>
 </header>

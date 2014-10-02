@@ -1,8 +1,10 @@
 .nav-circles {
-  min-height: 250px;
   margin-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
   vertical-align: middle;
+  position: relative;
+  z-index: 100;
   .circle-item {
     text-align: center;
     vertical-align: middle;
@@ -11,7 +13,6 @@
       color: #fff;
       position: relative;
       opacity: 0;
-      /*background-color: #ffffff;*/
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.00)), to(rgba(255, 255, 255, 0.00)));
       background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00));
       background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00));
@@ -43,6 +44,15 @@
       -ms-transition: all 1000ms ease;
       -o-transition: all 1000ms ease;
       transition: all 1000ms ease;
+      span {
+        position: relative;
+        top: 40%;
+        &.two-line {
+          font-size: 18px;
+          line-height: 21px;
+          top: 30%;
+        }
+      }
     }
   }
   &.affix-top {
@@ -52,7 +62,6 @@
         color: #fff;
         position: relative;
         opacity: 0;
-        /*background-color: #ffffff;*/
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.00)), to(rgba(255, 255, 255, 0.00)));
         background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00));
         background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00));
@@ -63,8 +72,8 @@
         font-size: 21px;
         border-color: #fff;
         border-width: 10px;
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         -webkit-transition: all 1000ms ease;
         -moz-transition: all 1000ms ease;
         -ms-transition: all 1000ms ease;
@@ -97,6 +106,10 @@
         -ms-transition: all 1000ms ease;
         -o-transition: all 1000ms ease;
         transition: all 1000ms ease;
+        &.larger {
+          width: 160px;
+          height: 160px;
+        }
       }
     }
   }
@@ -124,11 +137,6 @@
 
 .nav-circles.affix {
   position: relative!important;
-}
-
-.circle-item a span {
-  position: relative;
-  top: 40%;
 }
 
 h2.section-title {

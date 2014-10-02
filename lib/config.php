@@ -24,7 +24,7 @@ if( get_field('enable_bigvideo', 'options') ) {
 /**
  * Configuration values
  */
-define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+define('GOOGLE_ANALYTICS_ID', 'UA-51810570-1'); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 
 /**
  * .main classes
@@ -32,7 +32,7 @@ define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'col-sm-8';
+    $class = 'col-sm-10';
   } else {
     // Classes on full width pages
     $class = 'col-sm-12';
@@ -45,7 +45,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return apply_filters('roots/sidebar_class', 'col-sm-4');
+  return apply_filters('roots/sidebar_class', 'col-sm-2');
 }
 
 /**
@@ -68,8 +68,9 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page',
-      'is_archive',
-      'is_singular'
+      array('is_tax', array('type')),
+      array('is_post_type_archive', array('resource')),
+      array('is_singular', array('client', 'partner'))
     ),
     /**
      * Page template checks (via is_page_template())
@@ -78,8 +79,10 @@ function roots_display_sidebar() {
     array(
       'template-custom.php',
       'template-fullwidth.php',
+      'template-signup.php',
       'template-roles.php',
       'template-feed.php',
+      'template-logos.php',
       'template-singlepagelayout.php'
     )
   );

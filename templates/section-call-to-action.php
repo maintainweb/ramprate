@@ -2,7 +2,11 @@
 global $r;
 $button = get_sub_field('call_to_action_button');
 $size = get_sub_field('button_size');
-$style = implode(' ', get_sub_field('button_style'));
+
+if (get_sub_field('button_style')) {
+  $style = implode(' ', get_sub_field('button_style'));
+}
+
 $type = get_sub_field('button_type');
 $link = get_sub_field('call_to_action_link');
 $external = get_sub_field('call_to_action_external');

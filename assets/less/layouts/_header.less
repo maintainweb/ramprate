@@ -119,6 +119,12 @@
   }
 }
 
+body.page-child .active.menu-overview a,
+body.page-child .active.menu-about-us a {
+  background-color: transparent;
+  color: #333333;
+}
+
 
 body.logged-in.admin-bar {
   .banner {
@@ -163,6 +169,14 @@ section.header {
 
 
 .page-header-container {
+  .page-header-wrapper {
+    display: block;
+    position: relative;
+  }
+  &.default {
+    display: block;
+    position: relative;
+  }
   &.ontopimage {
     position: relative;
     &.right {
@@ -223,5 +237,7 @@ section.header {
 }
 
 body.page-id-207 section.header {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

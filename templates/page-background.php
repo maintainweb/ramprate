@@ -1,28 +1,40 @@
 <?php
-if( get_field('background_image') ) { $background_image = get_field('background_image'); }
-else { $background_image = get_field('background_image', 'options'); };
-if( get_field('background_color') ) { $background_color = get_field('background_color'); }
-else { $background_color = get_field('background_color', 'options'); };
-if( get_field('background_size') ) { $background_size = get_field('background_size'); }
-else { $background_size = get_field('background_size', 'options'); };
-if( get_field('background_repeat') ) { $background_repeat = get_field('background_repeat'); }
-else { $background_repeat = get_field('background_repeat', 'options'); };
-if( get_field('height') ) { $height = get_field('height'); }
-else { $height = get_field('height', 'options'); };
-if( get_field('background_position') ) { $background_position = get_field('background_position'); }
-else { $background_position = get_field('background_position', 'options'); };
-if( get_field('background_position_horizontal') ) { $background_position_horizontal = get_field('background_position_horizontal'); }
-else { $background_position_horizontal = get_field('background_position_horizontal', 'options'); };
-if( get_field('background_position_vertical') ) { $background_position_vertical = get_field('background_position_vertical'); }
-else { $background_position_vertical = get_field('background_position_vertical', 'options'); };
-if( get_field('fade_background_top_color') ) { $fade_background_top_color = get_field('fade_background_top_color'); }
-else { $fade_background_top_color = get_field('fade_background_top_color', 'options'); };
-if( get_field('fade_background_bottom_color') ) { $fade_background_bottom_color = get_field('fade_background_bottom_color'); }
-else { $fade_background_bottom_color = get_field('fade_background_bottom_color', 'options'); };
-if( get_field('fade_background_top_height') ) { $fade_background_top_height = get_field('fade_background_top_height'); }
-else { $fade_background_top_height = get_field('fade_background_top_height', 'options'); };
-if( get_field('fade_background_bottom_height') ) { $fade_background_bottom_height = get_field('fade_background_bottom_height'); }
-else { $fade_background_bottom_height = get_field('fade_background_bottom_height', 'options'); };
+if( get_field('background_image') ) {
+  $background_image = get_field('background_image');} else {
+  $background_image = get_field('background_image', 'options'); };
+if( get_field('background_color') ) {
+  $background_color = get_field('background_color');} else {
+  $background_color = get_field('background_color', 'options'); };
+if( get_field('background_size') ) {
+  $background_size = get_field('background_size');} else {
+  $background_size = get_field('background_size', 'options'); };
+if( get_field('background_repeat') ) {
+  $background_repeat = get_field('background_repeat');} else {
+  $background_repeat = get_field('background_repeat', 'options'); };
+if( get_field('background_position') ) {
+  $background_position = get_field('background_position');} else {
+  $background_position = get_field('background_position', 'options'); };
+if( get_field('background_position_horizontal') ) {
+  $background_position_horizontal = get_field('background_position_horizontal');} else {
+  $background_position_horizontal = get_field('background_position_horizontal', 'options'); };
+if( get_field('background_position_vertical') ) {
+  $background_position_vertical = get_field('background_position_vertical'); } else {
+  $background_position_vertical = get_field('background_position_vertical', 'options'); };
+if( get_field('fade_background_top_color') ) {
+  $fade_background_top_color = get_field('fade_background_top_color'); } else {
+  $fade_background_top_color = get_field('fade_background_top_color', 'options'); };
+if( get_field('fade_background_bottom_color') ) {
+  $fade_background_bottom_color = get_field('fade_background_bottom_color'); } else {
+  $fade_background_bottom_color = get_field('fade_background_bottom_color', 'options'); };
+if( get_field('fade_background_top_height') ) {
+  $fade_background_top_height = get_field('fade_background_top_height'); } else {
+  $fade_background_top_height = get_field('fade_background_top_height', 'options'); };
+if( get_field('fade_background_bottom_height') ) {
+  $fade_background_bottom_height = get_field('fade_background_bottom_height'); } else {
+  $fade_background_bottom_height = get_field('fade_background_bottom_height', 'options'); };
+if( get_field('height') ) {
+  $height = get_field('height');} else {
+  $height = get_field('height', 'options'); };
 
 $rgb        = hex2rgba($background_color);
 $rgba_full  = hex2rgba($background_color, 1.00);
@@ -36,19 +48,18 @@ $rgb_fade_bottom        = hex2rgba($fade_background_bottom_color);
 $rgba_full_fade_bottom  = hex2rgba($fade_background_bottom_color, 1.00);
 $rgba_clear_fade_bottom = hex2rgba($fade_background_bottom_color, 0.01);
 
-  if( !empty($background_image) ):
+if( !empty($background_image) ):
+  // vars
+  $url = $background_image['url'];
+  $title = $background_image['title'];
+  $alt = $background_image['alt'];
+  $caption = $background_image['caption'];
 
-    // vars
-    $url = $background_image['url'];
-    $title = $background_image['title'];
-    $alt = $background_image['alt'];
-    $caption = $background_image['caption'];
-
-    // sizes
-    $size = 'large';
-    $large = $background_image['sizes'][ $size ];
-    $largewidth = $background_image['sizes'][ $size . '-width' ];
-    $largeheight = $background_image['sizes'][ $size . '-height' ];
+  // sizes
+  $size = 'large';
+  $large = $background_image['sizes'][ $size ];
+  $largewidth = $background_image['sizes'][ $size . '-width' ];
+  $largeheight = $background_image['sizes'][ $size . '-height' ];
 
 endif; ?>
 
@@ -106,11 +117,11 @@ endif; ?>
     display: none!important;
   }
 <?php } ?>
-
+<?php if( !empty($height) ) { ?>
   .header {
-    <?php if( !empty($height) ) { ?>height: <?php echo $height; ?>px;<?php } ?>
+    height: <?php echo $height; ?>px;
   }
-
+<?php } ?>
 </style>
 <section class="header" <?php get_template_part('templates/data', 'stellar'); ?>>
 

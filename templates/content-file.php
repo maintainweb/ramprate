@@ -21,5 +21,5 @@ if (is_singular('resource')) {
 }
 
 if( get_field('resource_download') ):
-    ?><a class="btn <?php echo $class; ?>" href="<?php echo $url; ?>" title="Download <?php echo $title; ?>"><?php if(get_field('button_text')) { the_field('button_text'); } else { ?>Download<?php } ?> <i class="fa fa-download"></i></a><?php
+    ?><a class="btn <?php echo $class; ?>" href="<?php if ( is_user_logged_in() ) { echo $url; } else {?>#modal-signup<?php } ?>" title="Download <?php echo $title; ?>"<?php if ( is_user_logged_in() ) { } else {?> data-toggle="modal" data-target="#modal-signup"<?php } ?>><?php if(get_field('button_text')) { the_field('button_text'); } else { ?>Download<?php } ?> <i class="fa fa-download"></i></a><?php
 endif;

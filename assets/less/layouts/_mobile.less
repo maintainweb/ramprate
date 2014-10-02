@@ -1,0 +1,126 @@
+@media (max-width: @screen-xs-max) {
+  @navbar-height: 60px;
+  .navbar-toggle {
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .navbar-collapse {
+    background-color: #000;
+  }
+  .banner.affix {
+    background-color: #fff;
+    .navbar-collapse {
+      background-color: #fff;
+    }
+  }
+  .container > .navbar-header {
+    height: @navbar-height!important;
+    min-height: @navbar-height!important;
+  }
+  .navbar {
+    height: @navbar-height!important;
+    min-height: @navbar-height!important;
+  }
+  .banner {
+    height: @navbar-height!important;
+    min-height: @navbar-height!important;
+    .navbar-brand{
+      @brand-height: (@navbar-height - 20px);
+      @brand-width: (@navbar-height * 1.5);
+      .size(@brand-width; @brand-height);
+      margin-top: 15px!important;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 0 0 20px;
+      float: left;
+    }
+  }
+  .page-header-container.ontopimage {
+    .page-header-wrapper {
+      width: 100%;
+      &.left {
+        width: 100%;
+        float: none;
+      }
+      &.right {
+        width: 100%;
+        float: none;
+      }
+      .page-header {
+        clear: both;
+      }
+      .page-header h1,
+      .page-header h2 {
+        margin: 0 auto 10px auto;
+        font-size: 24px;
+      }
+      .lead {
+        clear: both;
+      }
+    }
+  }
+  body.home .single-page-section-1 {
+    height: auto!important;
+  }
+  .laptop-outer-wrap {
+    overflow: visible!important;
+    .laptop {
+      margin: 0 auto 0 auto;
+      img {
+        padding-top: 150px;
+      }
+    }
+  }
+  #columns {
+    .col-sm-3 {
+      .block {
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+  .carousel-control.right,
+  .carousel-control.left {
+    display: none;
+  }
+  .img-carousel {
+    width: 85%;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  #big-video {
+    display: none;
+  }
+
+  .feed-wrap {
+    .inner-col {
+      .col-sidebar {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+      .col-feed {
+        .btn-view {
+          margin-top: 15px;
+          margin-left: 0;
+          float: left;
+          clear: both;
+        }
+        .btn-default {
+          float: left;
+          clear: both;
+        }
+      }
+      article {
+        h3 {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .team-block {
+    margin: 0 auto;
+  }
+}

@@ -4,6 +4,7 @@ if( have_rows('sections') ):
  	global $r;
  	$r = 0;
     while ( have_rows('sections') ) : the_row();
+    $r++;
         if( get_row_layout() == 'big-video' ):
         	get_template_part('templates/section', 'big-video');
        	endif;
@@ -25,7 +26,10 @@ if( have_rows('sections') ):
         if( get_row_layout() == 'call_to_action' ):
             get_template_part('templates/section', 'call-to-action');
         endif;
- 	$r++;
+        if( get_row_layout() == 'carousel' ):
+            get_template_part('templates/section', 'carousel');
+        endif;
+
     endwhile;
 
 else :

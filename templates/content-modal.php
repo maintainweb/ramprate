@@ -77,7 +77,7 @@ endif;
             <?php if(get_field('solutions')) { ?>
               <dl>
                 <dt>RampRate Solutions:</dt>
-                <dd><?php the_field('industry'); ?></dd>
+                <dd><?php the_field('solutions'); ?></dd>
               </dl>
             <?php } ?>
           </div>
