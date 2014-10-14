@@ -1,5 +1,5 @@
 <address>
-  <strong>RampRate Headqurters</strong><br>
+  <strong>RampRate Headquarters</strong><br>
   <?php if (get_field('street_address', 'options')){ ?>
     <?php the_field('street_address', 'options');?><br>
   <?php } ?>

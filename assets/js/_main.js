@@ -60,6 +60,12 @@ var Roots = {
         }
       });
 
+      $('.hbspt-form').affix({
+        offset: {
+          top: 180
+        }
+      });
+
       $('.carousel').carousel({
         interval: 7000,
         wrap: true,
@@ -84,12 +90,12 @@ var Roots = {
       */
 
       $(function () {
-        if ($(window).width() > 767) {
+        if ($(window).width() > 867) {
           skrollr.init({forceHeight: false});
         }
 
         $(window).on('resize', function () {
-          if ($(window).width() <= 767) {
+          if ($(window).width() <= 867) {
             skrollr.init().destroy();
           } else {
               skrollr.init({forceHeight: false});
@@ -107,13 +113,13 @@ var Roots = {
         });
         BV.init();
         if (Modernizr.touch) {
-            BV.show('/wp-content/uploads/advantage-page-background.jpg');
+            BV.show('/wp-content/uploads/shutterstock_134985170-1024x724.jpg');
         } else {
             BV.show([
               //{ type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.sd.mp4?s=721c1d204d35c2d31647207fa0c46ddf' }
-              { type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.hd.mp4?s=343b3258c44c10fcd5ffcd16d02fe01e' }
-              //{ type: 'video/mkv',  src: '/wp-content/uploads/shutterstock_v3535412.mkv' },
-              //{ type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
+              { type: 'video/mp4',  src: 'http://player.vimeo.com/external/103746253.hd.mp4?s=343b3258c44c10fcd5ffcd16d02fe01e' },
+              { type: 'video/mkv',  src: '/wp-content/uploads/shutterstock_v3535412.mkv' },
+              { type: 'video/webm', src: '/wp-content/uploads/shutterstock_v3535412.webm' }
           ]);
             BV.getPlayer().on('durationchange',function(){
                 $('#big-video-wrap').fadeIn();

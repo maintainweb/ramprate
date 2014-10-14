@@ -70,7 +70,7 @@ function roots_display_sidebar() {
       'is_front_page',
       array('is_tax', array('type')),
       array('is_post_type_archive', array('resource')),
-      array('is_singular', array('client', 'partner'))
+      array('is_singular', array('client', 'partner', 'resource'))
     ),
     /**
      * Page template checks (via is_page_template())

@@ -1,0 +1,141 @@
+body.single-resource {
+  .content {
+    margin-top: -200px;
+    .box-shadow(@shadow: 0 -6px 6px rgba(0,0,0,.25));
+    background-color: #fff;
+    padding-bottom: 30px;
+  }
+  .banner {
+    nav.navbar-collapse {
+      display: none!important;
+    }
+  }
+  .alignleft {
+    margin-right: 25px;
+  }
+}
+
+body.page-id-1609 {
+  .content {
+    background-color: #fff;
+    padding-bottom: 30px;
+  }
+  .banner {
+    nav.navbar-collapse {
+      display: none!important;
+    }
+  }
+}
+
+.hbspt-form {
+  .transition(0.5s 0 all ease);
+  .box-shadow(@shadow: 0 3px 6px rgba(0,0,0,.25));
+  background-color: #fff;
+  padding: 20px!important;
+  margin-left: 0;
+  position: fixed;
+  top: 100px;
+  max-width: 350px;
+  &.affix {
+    position: fixed;
+    top: 120px;
+    margin-left: 0;
+    background-color: #fff;
+    z-index: 1090;
+    padding: 20px;
+    .transition(0.5s 0 all ease);
+  }
+  h3 {
+    font-family: @font-family-sans-serif!important;
+    font-weight: 300!important;
+    margin-top: 0!important;
+    color: @btn-primary-bg!important;
+    span {
+      color: @btn-primary-bg!important;
+    }
+  }
+  p {
+    font-family: @font-family-sans-serif!important;
+    font-weight: 300!important;
+  }
+  .hs-richtext {
+    font-family: @font-family-sans-serif!important;
+    font-weight: 300!important;
+  }
+}
+
+.hs-form.stacked .actions {
+  margin: 0 auto!important;
+  width: 120px;
+  padding: 20px 0 10px 0!important;
+}
+
+.hs-form {
+  .hs_submit {
+    margin: 0 auto!important;
+  }
+  .hs-button {
+    margin: 0 auto!important;
+    text-shadow: none!important;
+    display: inline-block!important;
+    margin-bottom: 0!important; // For input.btn
+    font-family: @font-family-sans-serif;
+    font-weight: @btn-font-weight!important;
+    text-align: center!important;
+    vertical-align: middle!important;
+    cursor: pointer!important;
+    background-image: none!important; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent!important;
+    white-space: nowrap!important;
+    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base)!important;
+    .user-select(none)!important;
+
+    &,
+    &:active,
+    &.active {
+      &:focus {
+        .tab-focus()!important;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: @btn-default-color!important;
+      text-decoration: none!important;
+    }
+
+    &:active,
+    &.active {
+      outline: 0!important;
+      background-image: none!important;
+      .box-shadow(inset 0 3px 5px rgba(0,0,0,.125))!important;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      cursor: not-allowed!important;
+      pointer-events: none!important; // Future-proof disabling of clicks
+      .opacity(.65)!important;
+      .box-shadow(none)!important;
+    }
+  }
+}
+
+
+.hs-button.primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border)!important;
+}
+
+
+.hs-button.large {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large)!important;
+}
+.hs-button.small {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small)!important;
+}
+.hs-button.xtra-small {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small)!important;
+}
