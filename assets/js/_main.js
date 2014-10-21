@@ -90,17 +90,11 @@ var Roots = {
       */
 
       $(function () {
-        if ($(window).width() > 867) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            skrollr.init().destroy();
+        } else {
           skrollr.init({forceHeight: false});
         }
-
-        $(window).on('resize', function () {
-          if ($(window).width() <= 867) {
-            skrollr.init().destroy();
-          } else {
-              skrollr.init({forceHeight: false});
-          }
-        });
       });
 
       $(function() {
