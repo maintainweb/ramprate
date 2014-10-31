@@ -16,6 +16,9 @@
 
 (function($) {
 
+//In order to test mobile settings in desktop environment, set to true...
+window.MOBILE_TEST = true;console.log(MOBILE_TEST);
+
 // Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
@@ -66,6 +69,12 @@ var Roots = {
         }
       });
 
+      $('.outer-well-sidebar').affix({
+        offset: {
+          top: 320
+        }
+      });
+
       $('.carousel').carousel({
         interval: 7000,
         wrap: true,
@@ -90,17 +99,10 @@ var Roots = {
       */
 
       $(function () {
-        if ($(window).width() > 867) {
-          skrollr.init({forceHeight: false});
-        }
-
-        $(window).on('resize', function () {
-          if ($(window).width() <= 867) {
-            skrollr.init().destroy();
-          } else {
-              skrollr.init({forceHeight: false});
-          }
-        });
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || MOBILE_TEST) {//Disable skollr fx for mobile devices
+          skrollr.init().destroy();
+          $('.partner-logo img').css('display', 'none');
+        } else { skrollr.init({forceHeight: false}); }
       });
 
       $(function() {

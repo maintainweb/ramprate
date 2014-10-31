@@ -76,8 +76,13 @@
   }
   #columns {
     .col-sm-3 {
+       margin-bottom:20px;
+
       .block {
-        margin: 0 auto 20px auto;
+        margin: 0 auto;
+        .top-content {
+          padding-top: 8%;
+        }
       }
     }
   }
@@ -85,10 +90,24 @@
   .carousel-control.left {
     display: none;
   }
+  .col-sm-6 {
+    height:auto !important;
+    .carousel-content {
+      width:72% !important;
+      margin:0 auto;
+    }
+  }
   .img-carousel {
     width: 85%;
     max-width: 85%;
     margin: 0 auto;
+  }
+  .laptop-outer-wrap {
+    height:560px !important;
+    .partner-logos-container { display:none !important; }
+  }
+  #laptop-section {
+    height:640px;
   }
   #big-video {
     display: none;
