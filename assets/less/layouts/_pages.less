@@ -71,7 +71,7 @@
       &.no-modal {
         cursor: default;
       }
-      .client {
+      .client,.partner {
         border: 2px solid #fff;
         opacity: 1;
         padding: 30px;
@@ -212,7 +212,7 @@
         padding-bottom: 30px;
       }
       .logo-link {
-        .client {
+        .client,.partner {
           .img-wrap {
             .img-client {
               height: 120px;
@@ -581,3 +581,450 @@ p.forgetmenot {
     min-height: 400px;
   }
 }
+
+.col-partner {
+  min-height: 150px;
+  .img-partner {
+
+  }
+}
+
+.outer-well-sidebar {
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  &.affix {
+    top: 140px;
+    width: 270px;
+  }
+}
+
+.well-links {
+  background-color: lighten(rgba(41,22,132,1), 50%);
+}
+
+.well-login {
+  p {
+    color: #fff;
+    font-weight: 700!important;
+  }
+  background-color: lighten(rgba(41,22,132,1), 20%);
+}
+
+
+    .partners-link {
+      &.no-modal {
+        cursor: default;
+      }
+      .client,.partner {
+        border: 2px solid #fff;
+        opacity: 1;
+        padding: 10px;
+        .transition(0.5s 0 background-color ease);
+        .img-wrap {
+          margin: 0 auto;
+          width: 100%;
+          display: block;
+          //float: left;
+          padding: 0;
+          position: relative;
+          .img-client {
+            margin: 0 auto;
+            width: 100%;
+            height: 150px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 0;
+            .transition(0.5s 0 background-image ease);
+            .fa {
+              position: absolute;
+              top: -15px;
+              left: -15px;
+              color: rgba(255, 255, 255, 0.8);
+              .transition(0.5s 0 color ease);
+            }
+          }
+          &.extra-tall {
+            .img-client {
+              @media (max-width: @screen-xs-max) {
+
+              }
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+              }
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+                width: 80%;
+              }
+              @media (min-width: @screen-lg-min) {
+                width: 50%;
+              }
+            }
+          }
+          &.tall {
+            .img-client {
+
+              @media (max-width: @screen-xs-max) {
+
+              }
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+              }
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+                width: 90%;
+              }
+              @media (min-width: @screen-lg-min) {
+                width: 85%;
+              }
+            }
+          }
+          &.medium {
+            .img-client {
+
+              @media (max-width: @screen-xs-max) {
+
+              }
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+              }
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+                margin-top: 20%;
+              }
+              @media (min-width: @screen-lg-min) {
+                margin-top: 10%;
+                width: 90%;
+              }
+            }
+          }
+          &.short {
+            .img-client {
+              @media (max-width: @screen-xs-max) {
+
+              }
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+              }
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+                margin-top: 25%;
+              }
+              @media (min-width: @screen-lg-min) {
+                margin-top: 20%;
+              }
+            }
+          }
+          &.extra-short {
+            .img-client {
+              @media (max-width: @screen-xs-max) {
+
+              }
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+              }
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+              }
+              @media (min-width: @screen-lg-min) {
+                margin-top: 35%;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        opacity: 0.9;
+        .transition(0.5s 0 background-color ease);
+        .client {
+          opacity: 0.9;
+          .transition(0.5s 0 background-color ease);
+          .img-client {
+            .transition(0.5s 0 background-image ease);
+            .fa {
+              .transition(0.5s 0 color ease);
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+    }
+
+
+            #logo-link-edge.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-edge.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/edge.png);
+            }
+            #logo-link-edge.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-edge.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/edge.png);
+            }
+
+
+            #logo-link-equinix.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-equinix.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/equinix.png);
+            }
+            #logo-link-equinix.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-equinix.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/equinix.png);
+            }
+
+
+            #logo-link-telecitygroup.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-telecitygroup.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/telecitygroup-color-logo.png);
+            }
+            #logo-link-telecitygroup.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-telecitygroup.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/telecitygroup-color-logo.png);
+            }
+
+
+            #logo-link-ibm.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-ibm.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/ibm-color-logo.png);
+            }
+            #logo-link-ibm.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-ibm.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/ibm-color-logo.png);
+            }
+
+
+            #logo-link-akamai.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-akamai.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/akamai.png);
+            }
+            #logo-link-akamai.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-akamai.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/akamai.png);
+            }
+
+
+            #logo-link-level3.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-level3.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/l3.png);
+            }
+            #logo-link-level3.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-level3.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/l3.png);
+            }
+
+
+            #logo-link-hcl.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-hcl.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/hcl.png);
+            }
+            #logo-link-hcl.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-hcl.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/hcl.png);
+            }
+
+
+            #logo-link-rackspace.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-rackspace.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/rackspace.png);
+            }
+            #logo-link-rackspace.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-rackspace.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/rackspace.png);
+            }
+
+
+            #logo-link-hp.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-hp.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/hp.png);
+            }
+            #logo-link-hp.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-hp.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/hp.png);
+            }
+
+
+            #logo-link-google.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-google.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/google.png);
+            }
+            #logo-link-google.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-google.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/google.png);
+            }
+
+
+            #logo-link-aws.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-aws.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/aws.png);
+            }
+            #logo-link-aws.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-aws.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/aws.png);
+            }
+
+
+            #logo-link-att.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-att.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/att.png);
+            }
+            #logo-link-att.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-att.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/att.png);
+            }
+
+
+            #logo-link-century.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-century.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/centurylink-color-logo.png);
+            }
+            #logo-link-century.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-century.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/centurylink-color-logo.png);
+            }
+
+
+            #logo-link-ipsoft.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-ipsoft.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/ipsoft.png);
+            }
+            #logo-link-ipsoft.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-ipsoft.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/ipsoft.png);
+            }
+
+
+            #logo-link-globalswitch.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-globalswitch.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/global-switch-black-logo.png);
+            }
+            #logo-link-globalswitch.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-globalswitch.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/global-switch-black-logo.png);
+            }
+
+
+            #logo-link-wipro.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-wipro.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/wipro.jpg);
+            }
+            #logo-link-wipro.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-wipro.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/wipro.jpg);
+            }
+
+
+            #logo-link-limelight.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-limelight.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/limelight.jpeg);
+            }
+            #logo-link-limelight.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-limelight.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/limelight.jpeg);
+            }
+
+
+            #logo-link-digitalrealty.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-digitalrealty.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/digitalreality.png);
+            }
+            #logo-link-digitalrealty.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-digitalrealty.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/digitalreality.png);
+            }
+
+
+            #logo-link-windows.partners-link article {
+              background-color: #fff;
+            }
+            #logo-link-windows.partners-link article .img-client {
+              background-image: url(/wp-content/uploads/microsoft-color-logo.png);
+            }
+            #logo-link-windows.partners-link:hover article {
+              background-color: #fff!important;
+            }
+            #logo-link-windows.partners-link:hover article .img-client {
+              background-image: url(/wp-content/uploads/microsoft-color-logo.png);
+            }
+
+            .single-page-section-1,
+            .single-page-section-3,
+            .single-page-section-5,
+            .single-page-section-7 {
+              .partners-link article {
+                background-color: #eee!important;
+              }
+            }

@@ -75,6 +75,12 @@ var Roots = {
         }
       });
 
+      $('.outer-well-sidebar').affix({
+        offset: {
+          top: 320
+        }
+      });
+
       $('.carousel').carousel({
         interval: 7000,
         wrap: true,
